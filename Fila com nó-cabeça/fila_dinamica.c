@@ -22,18 +22,11 @@ typedef struct {
   PONT fim;
 } FILA;
 
-/* Inicialização da fila ligada (a fila jah esta criada e eh apontada pelo endereco em f) */
 void inicializarFila(FILA* f){
   f->cabeca = (PONT) malloc(sizeof(ELEMENTO));
   f->cabeca->prox = f->cabeca;
   f->inicio = f->cabeca;
   f->fim = f->cabeca;
-} 
-
-void testando(FILA* f){
-
-  if(f->inicio->prox == f->cabeca) printf("Foda-se");
-
 } 
 
 int tamanho(FILA* f) {
